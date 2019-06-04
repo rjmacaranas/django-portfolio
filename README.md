@@ -1,4 +1,4 @@
-# Making a Django Portfolio!
+# Making a Django Portfolio :shit: :shit: :shit:
 
 ## Opening the website
 
