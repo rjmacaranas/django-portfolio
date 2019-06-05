@@ -57,22 +57,34 @@ class Job(models.Model):
 ```
 
 Postgresql
-> click server settings
-> make sure port is 5432
-> check automatically start server
-> initialize
-> click postgres icon
-> \password postgres
-> enter password
-> CREATE DATABASE portfoliodb;
-> navigate to settings.py and update DATABASES
-> change sqlite3 to postgresql
-> change NAME: 'portfoliodb'
-> add 'USER': 'postgres',
+- click server settings
+- make sure port is 5432
+- check automatically start server
+- initialize
+- click postgres icon
+- \password postgres
+- enter password
+- CREATE DATABASE portfoliodb;
+- navigate to settings.py and update DATABASES
+- change sqlite3 to postgresql
+- change NAME: 'portfoliodb'
+- add 'USER': 'postgres',
 'PASSWORD': 'ram22899'
 'HOST': 'localhost'
 'PORT': '5432'
 
+### 6. Addressing Migration Errors
+Migration - way to set up database for a project. 
+- navigate to models.py
+- run makemigrations anytime you make a new model or update a model
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
+this means that we are able to add things into the database now
 
-
-
+### 7. Adding to Database with Admin
+navigate to serverpage/admin
+create a terminal for admin login
+`python3 manage.py createsuperuser`
+navigate to `admin.py` in `portfolio-project/jobs`
+`from .models import Job`
+`admin.site.register(Job)`
