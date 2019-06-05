@@ -55,3 +55,24 @@ class Job(models.Model):
 
     summary = models.CharField(max_length=200)
 ```
+
+Postgresql
+> click server settings
+> make sure port is 5432
+> check automatically start server
+> initialize
+> click postgres icon
+> \password postgres
+> enter password
+> CREATE DATABASE portfoliodb;
+> navigate to settings.py and update DATABASES
+> change sqlite3 to postgresql
+> change NAME: 'portfoliodb'
+> add 'USER': 'postgres',
+'PASSWORD': 'ram22899'
+'HOST': 'localhost'
+'PORT': '5432'
+
+
+
+
