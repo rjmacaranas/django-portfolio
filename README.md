@@ -88,3 +88,34 @@ create a terminal for admin login
 navigate to `admin.py` in `portfolio-project/jobs`
 `from .models import Job`
 `admin.site.register(Job)`
+
+### 8. Adding a Job
+navigate to admin, click on add job
+upload image and summary
+uploading an image creates a new `images` folder in the project directory
+
+### 9. Moving Database Items to Homepage
+navigate to `views.py`
+
+```python3
+# in views.py add these
+
+from .models import Jobs
+
+def homepage(request):
+    jobs = Job.objects
+    return render(request, 'jobs/home.html', {'jobs':jobs})
+```
+
+now everything should show up on the homepage
+
+
+### 10. Adding Bootstrap
+copy source code from album bootstap example page
+and paste into your homepage html file
+edit each section along with video
+
+
+### 11. Adding Static Images in Django
+Inside jobs folder make a new folder called static
+

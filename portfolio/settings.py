@@ -123,3 +123,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# define a static root where to store static files
+# do not want to have a definite path, refer to files within project
+STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
+
+
+
+
+
+
+
+
+
+
